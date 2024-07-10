@@ -94,4 +94,13 @@ create table if not exists search_request(
     created_at  timestamp DEFAULT current_timestamp,
     PRIMARY KEY(id),
     CONSTRAINT fk_search_requests_sender_id FOREIGN KEY (sender_id) REFERENCES users (id)
+);
+
+create table if not exists recovery_password(
+    id SERIAL NOT NULL,
+    user_id bigint not null,
+    token text not null,
+    start_time TIMESTAMP not null,
+    PRIMARY KEY(id),
+    CONSTRAINT fk_recovery_password_user_id FOREIGN KEY(user_id) REFERENCES users(id)
 )

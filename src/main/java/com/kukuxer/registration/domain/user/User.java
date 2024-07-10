@@ -2,6 +2,7 @@ package com.kukuxer.registration.domain.user;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.kukuxer.registration.domain.RecoveryPassword;
 import com.kukuxer.registration.domain.match.Match;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
